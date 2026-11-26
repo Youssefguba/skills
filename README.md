@@ -71,4 +71,18 @@ npx skills update qa-tester --global
 
 The skill is in [`skills/qa-tester`](skills/qa-tester). Start with [`SKILL.md`](skills/qa-tester/SKILL.md).
 
+## Install Scrapbook Split Reel
+
+Turns a finished, uncut talking-head video into a 1080×1920 reel: the speaker stays full screen, and the screen splits half and half (attachment taped on scrapbook paper on top, speaker below) whenever a screen recording, screenshot or report is being talked about. Captions run throughout on paper strips, and nothing in the footage is cut.
+
+```sh
+npx skills add Youssefguba/skills --skill scrapbook-split-reel --global --agent claude-code
+```
+
+Use it with `/scrapbook-split-reel`, or just ask for a reel from a ready video and hand over the recordings to attach.
+
+Requirements: ffmpeg, Node.js (for the bundled Remotion template in `assets/template`), and a Python 3.11 venv with `faster-whisper` and `librosa` for `scripts/transcribe.py`. The optional `cutout.swift` helper needs macOS 14+.
+
+The skill is in [`skills/scrapbook-split-reel`](skills/scrapbook-split-reel). Start with [`SKILL.md`](skills/scrapbook-split-reel/SKILL.md).
+
 Installer documentation: [Skills CLI](https://github.com/vercel-labs/skills/blob/main/docs/commands.md).
